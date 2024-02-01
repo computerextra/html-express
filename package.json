@@ -1,0 +1,45 @@
+{
+  "name": "html-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "start:node": "ts-node src/index.ts",
+    "watch:sass": "sass --watch src/sass:assets/css",
+    "build:sass": "sass src/sass:assets/css --style=compressed",
+    "watch:node": "nodemon --watch src --watch public --watch assets src/index.ts",
+    "start": "npm-run-all build:sass start:node",
+    "dev": "npm-run-all build:sass --parallel watch:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.9.0",
+    "bootstrap": "^5.3.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "nunjucks": "^3.2.4",
+    "prisma": "^5.9.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.11.15",
+    "@types/nunjucks": "^3.2.6",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
+    "eslint": "^8.56.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "nodemon": "^3.0.3",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.70.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
